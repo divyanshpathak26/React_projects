@@ -4,8 +4,10 @@ import { div } from 'framer-motion/client'
 
 function Profile() {
     const{user}=useContext(UserContext)
-  if(!user) return 
+  if(!user) {
+    return 
   <div>please login</div>
+  }
 
   return <div>welcm{user.username}</div>
 }
